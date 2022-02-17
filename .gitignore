@@ -32,3 +32,6 @@ Algoritimos em Kotlin/.idea/misc.xml
 Algoritimos em Kotlin/.idea/libraries/KotlinJavaRuntime.xml
 Algoritimos em Kotlin/.idea/codeStyles/Project.xml
 Algoritimos em Kotlin/.idea/codeStyles/codeStyleConfig.xml
+*.xml
+*.iml
+out/production/Estudos-em-Kotlin/META-INF/Estudos-em-Kotlin.kotlin_module
