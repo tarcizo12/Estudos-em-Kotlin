@@ -7,18 +7,19 @@ fun convert(M: Double,D: Double): Double {
         M == 3.0 -> D * 3.57
         else -> {
             "Número inválido"
+             //* COMO RETORNAR UM ERRO ? (DUVIDA)
         }
 
     }
 
     return money as Double;
+
+    //*QUAL A NECESSIDADE DO "AS DOUBLE? " ( COMPARAR COM A QUESTAO 3 )
 }
 
-fun prompt(): Double {
+fun prompt() = readLine()!!.toDouble() ?: 0.0; //*PERGUNTAR MELHRO SOBE O ?: 0.0
 
-    return readLine()!!.toDouble() ?: 0.0;
-    println();
-}
+
 
 
 fun main() {
