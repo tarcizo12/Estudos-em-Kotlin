@@ -17,7 +17,7 @@ fun convert(M: Double,D: Double): Double {
     //*QUAL A NECESSIDADE DO "AS DOUBLE? " ( COMPARAR COM A QUESTAO 3 )
 }
 
-fun prompt() = readLine()!!.toDouble() ?: 0.0; //*PERGUNTAR MELHRO SOBE O ?: 0.0
+private fun prompt() = readLine()!!.toDouble() ?: 0.0; //*PERGUNTAR MELHRO SOBE O ?: 0.0
 
 
 

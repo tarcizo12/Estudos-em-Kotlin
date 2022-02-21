@@ -1,6 +1,6 @@
 package tarcizo_list
 
-fun prompt() =  readLine()!!.toDouble()
+private fun prompt() =  readLine()!!.toDouble()
 
 
 fun salario(Num_Hex: Double, Sm: Double , Num_H: Double): Double {
