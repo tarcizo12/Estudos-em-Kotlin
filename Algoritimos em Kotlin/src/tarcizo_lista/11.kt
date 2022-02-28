@@ -7,8 +7,8 @@ private fun promptString(message: String): String {
 
 fun verifyNumbers(): String {
 
-    var bigger = 0
-    var smaller = 999999
+    var bigger = Int.MIN_VALUE
+    var smaller = Int.MAX_VALUE
 
     while(true){
         //key to stop = stop
