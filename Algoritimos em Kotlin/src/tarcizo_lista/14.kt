@@ -1,25 +1,25 @@
 package tarcizo_list
 
+import java.util.Arrays
+
 private fun promptInt(message: String): Int {
     print(message)
     return readLine()!!.toInt()
 }
 
-fun positiveArray(){
+fun nullArray(): String {
     val array = IntArray(3)
 
     for(i in array.indices){
         array[i] = promptInt("Digite o numero ")
+        if(array[i] == 0) array[i] = 1
     }
 
-    print("Os elementos positivos do array são: ")
-    array.forEach{
-        if(it>0) print("$it ")
-    }
-
+    return array.contentToString()
 
 }
 
 fun main() {
-    positiveArray()
+
+    print(nullArray())
 }
