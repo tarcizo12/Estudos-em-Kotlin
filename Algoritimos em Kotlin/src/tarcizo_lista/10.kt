@@ -5,10 +5,16 @@ private fun prompt(x: String): Int {
     return readLine()!!.toInt()
 }
 
-fun optionOne(): Int {
+fun optionOne(): Double {
     val wage = prompt("Digite o seu salário ")
-    println("Seu salário é de: $wage R$")
-    return wage;
+    val increase = when{
+        wage < 210 -> 1.15
+        wage in 210 until 600 -> 1.1
+        else -> 1.05
+
+    }
+    println("Seu novo salário é de: ${wage*increase} R$")
+    return wage*increase
 }
 
 fun optionTwo(): Double {
@@ -20,7 +26,7 @@ fun optionTwo(): Double {
 fun optionThree(): Double {
     val wage= optionOne()
 
-    var numberOfMonths =prompt("Digite quantos meses você trabalhou ")
+    val numberOfMonths =prompt("Digite quantos meses você trabalhou ")
     return if (numberOfMonths > 12) {
         println("Valor invalido")
         optionThree()
