@@ -5,8 +5,10 @@ private fun promptInt(message: String): Int {
     return readLine()!!.toInt()
 }
 
-fun multiplyDiagonalIndex(arrayMatrix: Array<IntArray>, rows: Int, columns: Int): Array<IntArray> {
+fun multiplyDiagonalIndex(arrayMatrix: Array<IntArray>): Array<IntArray> {
     val diagonalIndices = mutableListOf<Int>()
+    val rows = arrayMatrix.size
+    val columns = arrayMatrix[0].size
 
     for(i in 0 until rows){
         for(j in 0 until columns){
@@ -25,7 +27,8 @@ fun multiplyDiagonalIndex(arrayMatrix: Array<IntArray>, rows: Int, columns: Int)
 }
 
 private fun createMatrix(rows: Int, columns: Int): Array<IntArray> {
-    val matrix = Array(5){IntArray(5)}
+
+    val matrix = Array(rows){ IntArray(columns )}
 
     for(i in 0 until rows){
         for(j in 0 until columns){
@@ -36,7 +39,9 @@ private fun createMatrix(rows: Int, columns: Int): Array<IntArray> {
     return matrix
 }
 
-private fun printMatrix(arrayMatrix: Array<IntArray>,rows: Int, columns: Int){
+private fun printMatrix(arrayMatrix: Array<IntArray>){
+    val rows = arrayMatrix.size
+    val columns = arrayMatrix[0].size
 
     for(i in 0 until rows ){
         for(j in 0 until columns){
@@ -49,17 +54,17 @@ private fun printMatrix(arrayMatrix: Array<IntArray>,rows: Int, columns: Int){
 
 fun main() {
 
-    val columns = 5
-    val rows = 5
+    val columns = 3
+    val rows = 3
     var matrix = createMatrix(rows, columns)
 
     println("Sua matriz inicial é: ")
-    printMatrix(matrix,rows,columns)
+    printMatrix(matrix)
 
-    matrix = multiplyDiagonalIndex(matrix, rows, columns)
+    matrix = multiplyDiagonalIndex(matrix)
 
     println("Sua nova matriz é: ")
-    printMatrix(matrix, rows, columns)
+    printMatrix(matrix)
 
 
 
