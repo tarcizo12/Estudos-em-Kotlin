@@ -10,12 +10,13 @@ import android.provider.MediaStore
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import java.util.jar.Manifest
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-    val urlWhatsapp = "https://api.whatsapp.com/send?phone=+5585986564561"
-    val urlMaps = "https://goo.gl/maps/uzixnx67aoAg9rhq9"
+    val urlWhatsapp = "https://api.whatsapp.com/send?phone=+5585985698987" //número da pizzaria
+    val urlMaps = "https://goo.gl/maps/vtQK1v7GRZMdVVRPA" //iguatemi 
     lateinit var whatsapp: Button
     lateinit var googleMaps: Button
     lateinit var camera: Button
@@ -53,15 +54,23 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun openWhatsapp() {
+        try{
         val intent = Intent(Intent.ACTION_VIEW)
         intent.data = Uri.parse(urlWhatsapp)
         startActivity(intent)
+        }catch (e: PackageManager.NameNotFoundException) { Toast.makeText(this, "O aplicativo não está instalado", Toast.LENGTH_SHORT).show(); }
+
     }
 
     private fun openMaps() {
+        try{
+
         val intent = Intent(Intent.ACTION_VIEW)
         intent.data = Uri.parse(urlMaps)
         startActivity(intent)
+
+        }catch (e: PackageManager.NameNotFoundException){ Toast.makeText(this, "O aplicativo não está instalado", Toast.LENGTH_SHORT).show(); }
+
     }
 
     private fun openCamera() {
