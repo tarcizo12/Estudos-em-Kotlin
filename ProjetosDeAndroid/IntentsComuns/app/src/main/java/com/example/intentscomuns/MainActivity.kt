@@ -16,7 +16,7 @@ import java.util.jar.Manifest
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     val urlWhatsapp = "https://api.whatsapp.com/send?phone=+5585985698987" //número da pizzaria
-    val urlMaps = "https://goo.gl/maps/vtQK1v7GRZMdVVRPA" //iguatemi 
+    val urlMaps = "https://goo.gl/maps/vtQK1v7GRZMdVVRPA" //iguatemi
     lateinit var whatsapp: Button
     lateinit var googleMaps: Button
     lateinit var camera: Button
